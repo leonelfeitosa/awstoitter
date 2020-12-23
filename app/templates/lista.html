@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista dos Usuários</title>
+    </head>
+    <body>
+        <h1>Lista dos Usuarios do Toilter</h1>
+        <hr>
+        <table border="4">
+            <tr>
+                <td>id</td>
+                <td>Nome</td>
+                <td>Email</td>
+                <td>Usuario</td>
+                <td>Senha</td>
+                <td>Exluir</td>
+                <td>Atualizar</td>
+            </tr>
+            {% for pessoa in pessoas %}
+            <tr>
+                <td>{{ pessoa.id }}</td>
+                <td>{{ pessoa.name }}</td>
+                <td>{{ pessoa.email }}</td>
+                <td>{{ pessoa.username }}</td>
+                <td>{{ pessoa.password }}</td>
+                <td><a href="/excluir/{{ pessoa.id }}"> X </a></td>
+                <td><a href="/atualizar/{{ pessoa.id }}"> Atualizar </a></td>
+            </tr>
+            {% endfor %}
+        </table>
+        <td><a href="/index"> Voltar </a></td>
+    </body>
+</html>

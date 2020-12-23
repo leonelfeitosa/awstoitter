@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ super() }} - Atualizar {% endblock %}
+
+{% block content %}
+
+
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>Atualizar</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <link href="{{ url_for('static', filename="css/style.css") }}" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container" >
+        <legend>Atualizar</legend>
+        <form action="" method="POST">
+        <div class="content">      
+    
+            <!--FORMULÁRIO DE CADASTRO-->
+            <div id="atualizar">
+                <h1>Atualizar</h1> 
+                
+                <p> 
+                <label for="name">Seu nome</label>
+                <input id="name" name="name" type="text" value="{{ pessoa.nome }}" />
+                </p>
+                
+                <p> 
+                <label for="email">Seu e-mail</label>
+                <input id="email" name="email" type="email" value="{{ pessoa.email }}"/> 
+                </p>
+                
+                <p> 
+                    <label for="username">Seu usuário</label>
+                    <input id="username" name="username" type="text" value="{{ pessoa.username }}" /> 
+                    </p>
+                
+                <p> 
+                <label for="password">Sua senha</label>
+                <input id="password" name="password" type="password" value="{{ pessoa.password }}"/>
+                </p>
+                
+                <p> 
+                <input type="submit" value="Atualizar"/> 
+                </p>
+            </form>
+            </div>
+        </div>
+        </div> 
+        </form>
+        <a href="/index">Voltar</a>
+    </body>
+</html>
+
+
+
+
+
+
+
+{% endblock %}
